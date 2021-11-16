@@ -33,11 +33,9 @@ def mainloop(validProgram : ValidProgram):
         elif code == "[":
             if tape.value() == 0:
                 pc = map[pc]
-                # continue # Skip forward to the matching ]
         elif code == "]":
             if tape.value() != 0:
                 pc = map[pc]
-                # continue # Skip back to the matching [
         pc += 1
 
 class Tape(object):
