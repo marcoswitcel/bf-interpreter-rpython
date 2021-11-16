@@ -2,7 +2,7 @@
 
 ## Introdução e contextualização
 
-Esse repositório surgiu após eu ter assistido a esse vídeo no YouTune ["Pixie - A Lightweight Lisp with 'Magical' Powers" by Timothy Baldridge](https://www.youtube.com/watch?v=1AjhFZVfB9c&list=WL&index=2). No vídeo o palestrante fala sobre um nova implementação de [Lisp](https://pt.wikipedia.org/wiki/Lisp) que ele estava desenvolvendo fazia algum tempo, hoje esse projeto está parado. A parte importante é que o palastrante, além de falar sobre essa nova implementação de Lisp chamada [Pixie](https://pixielang.org/), explica como o interpretador foi construindo com o uso das "ferramentas" [RPython](https://rpython.readthedocs.io/en/latest/translation.html) e porque essas ferramentas foram escolhidas. Ele argumenta que há muito potencial e recursos prontos para a construção de interpretadores diversos no ambiente RPython. Essas ferramentas são usadas no desenvolvimento do interpretador [PyPy](https://www.pypy.org/), um interpretador Python alternativo ao CPython (o interpretador mais conhecido). Então, logo após o término do vídeo comecei a pesquisar tutorias para aprender um pouco mais sobre RPython, acabei encontrando esse link [Tutorial: Writing an Interpreter with PyPy, Part 1](https://morepypy.blogspot.com/2011/04/tutorial-writing-interpreter-with-pypy.html), que o tutorial base que deu origem e esse repositório, hoje tenho dois propósitos com esse repositório: ter um interpretador BrainFuck funcional, e por funcional digo que consiga executar uma parcela considerável de programas escritos na linguagem; ter um exemplo de um programa RPython para usar como material no futuro para possíveis outros interpretadores.
+Esse repositório surgiu após eu ter assistido a esse vídeo no YouTune ["Pixie - A Lightweight Lisp with 'Magical' Powers" by Timothy Baldridge](https://www.youtube.com/watch?v=1AjhFZVfB9c&list=WL&index=2). No vídeo o palestrante fala sobre um nova implementação de [Lisp](https://pt.wikipedia.org/wiki/Lisp) que ele estava desenvolvendo fazia algum tempo, hoje esse projeto está parado. A parte importante é que o palestrante, além de falar sobre essa nova implementação de Lisp chamada [Pixie](https://pixielang.org/), explica como o interpretador foi construindo com o uso das "ferramentas" [RPython](https://rpython.readthedocs.io/en/latest/translation.html) e porque essas ferramentas foram escolhidas. Ele argumenta que há muito potencial e recursos prontos para a construção de interpretadores diversos no ambiente RPython. Essas ferramentas são usadas no desenvolvimento do interpretador [PyPy](https://www.pypy.org/), um interpretador Python alternativo ao CPython (o interpretador mais conhecido). Então, logo após o término do vídeo comecei a pesquisar tutoriais para aprender um pouco mais sobre RPython, acabei encontrando esse link [Tutorial: Writing an Interpreter with PyPy, Part 1](https://morepypy.blogspot.com/2011/04/tutorial-writing-interpreter-with-pypy.html), que é o tutorial base que deu origem a esse repositório, hoje tenho dois propósitos com esse repositório: ter um interpretador BrainFuck funcional, e por funcional digo que consiga executar uma parcela considerável de programas escritos na linguagem; ter um exemplo de um programa RPython para usar como material no futuro para possíveis outros interpretadores.
 
 ## Material principal
 
@@ -69,7 +69,7 @@ Hello world!
 
 ```
 
-# Material suplementar
+## Material suplementar
 
 Links de materiais que usei para complementar a minha implementação do interpretador
 
