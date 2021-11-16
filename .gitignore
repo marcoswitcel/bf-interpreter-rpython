@@ -1,0 +1,3 @@
+# Evitando caches
+__pycache__/
+pypy/
