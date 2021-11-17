@@ -1,3 +1,4 @@
 # Evitando caches
 __pycache__/
-pypy/
+
+# pypy/ # importado como submodulo
