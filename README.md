@@ -111,6 +111,7 @@ $ cd bf-interpreter-rpython
 $ export TEST_PYTHON_EXEC=python3
 # execute o módulo unittest com o parâmetro discober na pasta  "tests" e modo verboso
 $ python -m unittest discover -s tests -v
+
 ```
 
 Para rodar os testes do script python2, é necessário configurar a variável "TEST_PYTHON2_EXEC" com o caminho do executável.
@@ -122,8 +123,8 @@ $ cd bf-interpreter-rpython
 $ $Env:TEST_PYTHON2_EXEC =  "D:\Program Files\Python27\python.exe"
 # execute o módulo unittest com o parâmetro discober na pasta  "tests" e modo verboso
 $ python -m unittest discover -s tests -v
-```
 
+```
 
 ## Material suplementar
 
