@@ -93,6 +93,38 @@ Hello world!
 
 ```
 
+## Rodando os teste
+
+```bash
+# navegue até a raíz do projeto
+$ cd bf-interpreter-rpython
+# execute o módulo unittest com o parâmetro discober na pasta  "tests" e modo verboso
+$ python -m unittest discover -s tests -v
+```
+
+Caso seu executável python global não se chame python, pode configurar o nome do executável usado dentro dos teste
+
+```bash
+# navegue até a raíz do projeto
+$ cd bf-interpreter-rpython
+# configurando o nome ou caminho do seu executável
+$ export TEST_PYTHON_EXEC=python3
+# execute o módulo unittest com o parâmetro discober na pasta  "tests" e modo verboso
+$ python -m unittest discover -s tests -v
+```
+
+Para rodar os testes do script python2, é necessário configurar a variável "TEST_PYTHON2_EXEC" com o caminho do executável.
+
+```powershell
+# navegue até a raíz do projeto
+$ cd bf-interpreter-rpython
+# configurando o nome ou caminho do seu executável
+$ $Env:TEST_PYTHON2_EXEC =  "D:\Program Files\Python27\python.exe"
+# execute o módulo unittest com o parâmetro discober na pasta  "tests" e modo verboso
+$ python -m unittest discover -s tests -v
+```
+
+
 ## Material suplementar
 
 Links de materiais que usei para complementar a minha implementação do interpretador

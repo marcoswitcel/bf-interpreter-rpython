@@ -108,7 +108,7 @@ if __name__ == "__main__":
     # link para o stackoverflow: https://stackoverflow.com/questions/67890157/python-3-9-1-argparse-exit-on-error-not-working-in-certain-situations
     # link da issue: https://bugs.python.org/issue41255
     
-    parser = argparse.ArgumentParser(description="Executa programas escritos na linguagem ""brainfuck""", exit_on_error=False)
+    parser = argparse.ArgumentParser(description="Executa programas escritos na linguagem ""brainfuck""") #, exit_on_error=False)
     # argumento obrigatório
     parser.add_argument('arquivo', metavar='arquivo', type=str, help="caminho do programa `bf` a ser executado")
 
