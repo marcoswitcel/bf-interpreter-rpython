@@ -2,3 +2,7 @@
 __pycache__/
 
 # pypy/ # importado como submodulo
+build/
+
+# Cópia da lib rpython
+src/rpython/

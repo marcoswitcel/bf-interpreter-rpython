@@ -116,6 +116,26 @@ Hello world!
 
 ```
 
+## Realizando o build com RPython e o JIT configurado
+
+```bash
+# navegue até a raíz do projeto
+$ cd bf-interpreter-rpython
+# Execute o script de build "pypy/rpython/bin/rpython", eu usei o próprio
+# interpretador pypy para realizar o build, mas qualquer interpretador
+# python2 deve funcionar, a parte mais complexa tem relação com a configuração
+# dos compiladores C/C++, como realizei o build usando o
+# Windows Subsystem for Linux (WSL), os compiladores no meu Ubuntu já
+# estavam configurados. O processo de build demora uns 8 minutos mais ou menos
+$ python pypy/rpython/bin/rpython --opt=jit src/bf-interpreter__python2-rpython-with-jit.py
+# Ao final você terá um executável chamado "bf-interpreter__python2-rpython-c"
+# para executar seus programas BF basta digitar o nome do interpretador
+# seguido pelo caminho do programa
+$ ./bf-interpreter__python2-rpython-with-jit-c  bf-programs-samples/hello-world.b
+Hello world!
+
+```
+
 ## Rodando os testes
 
 ```bash
@@ -154,5 +174,6 @@ $ python -m unittest discover -s tests -v
 Links de materiais que usei para complementar a minha implementação do interpretador
 
 * [Link do Gist com material adicional de como funciona e como implementar um "interpretador" BrainFuck](https://gist.github.com/roachhd/dce54bec8ba55fb17d3a)
+* [Exemplos de código similares ao do tutorial](https://github.com/pablojorge/brainfuck/tree/master/python)
 * [Outro interpretador BF usado para fins de comparação](https://github.com/joshhoughton/PyFuck/blob/master/pyfuck.py)
 * [Material sobre o comportamento esperado de "wrapping"](https://www.reddit.com/r/brainfuck/comments/7o2bxx/what_does_wrapping_mean/)
