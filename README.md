@@ -15,9 +15,32 @@ Os links do tutorial usado como base seguem abaixo, os dois primeiros são os li
 * **Links novos:** [Tutorial: Writing an Interpreter with PyPy, Part 1](https://www.pypy.org/posts/2011/04/tutorial-writing-interpreter-with-pypy-3785910476193156295.html)
 * **Links novos:** [Tutorial Part 2: Adding a JIT](https://www.pypy.org/posts/2011/04/tutorial-part-2-adding-jit-8121732841568309472.html)
 
-### Sobre o material e o turorial
+### Sobre o material e o tutorial
 
 Partes do código do tutorial não estavam bem explicadas para mim, mesmo copiando e colando o código no arquivo o programa não rodou e quando rodou, não rodou corretamenta. Infelizmente os repositórios citados no tutorial já não existem mais, pelo menos não nos mesmos links. Fazendo uma pesquisa rápida na internet não fui capaz de encontrá-los através de outros nomes. Optei por gastar meu tempo entendo como completar o interpretador. Como não havia mais código de referência acabei lendo mais sobre a linguagem em questão e terminando o interpretador, no final acabei corrigindo bugs e aderindo ao modelo mais comum de interpretadores BrainFuck, com células de 8 bit sem sinal e com "wraparound", quando há overflow segue contando do zero ou quando ha "underflow" segue contando do 255.
+
+## Definições formais do interpretador
+
+Essa linguagem é tão simples que a própria linguagem pode ser usada como `bytecode`, não é necessário o processo de tradução do `source` para `bytecode`. Ela poderá ser interpretada diretamente no laço de interpretação.
+Embora algumas otimizações podem ser fetias no `source/bytecode`, como por exemplo remoção de código que não geram efeito significativo no `output` do progama, como por exemplo: `++-.`, onde o comando `+` seguido do comando `-` se anula e resulta no efeito de apenas um comando `+`.
+Outra otimização de execução simples é a remoção de caracteres fora das lista de comandos válidos dos arquivos contendo programas BF.
+
+* O modelo de memória da fita se resume a uma sequencia infinita positiva, começando na posição 0, ou seja, o programa em nenhum momento deve tornar o ponteiro da fita um valor negativo, pois isso poderá causar um `comportamento indefinido` no programa
+* As células tem o tamanho de 1 byte de tamanho sem sinal, sempre devendo ser interpretadas como tal
+* Todas as células estarão inicializadas com o valor zero antes da primeira leitura ou escrita
+
+## Brainfuck Instruções
+
+|  Símbolo  | efeito |
+|   :--:    | :--: |
+| **`>`** | move o ponteiro da fita uma célular para a direita |
+| **`<`** | move o ponteiro da fita uma célular para a esquerda |
+| **`+`** | Soma 1 ao valor da célula sob o ponteiro |
+| **`-`** | subtrai 1 ao valor da célula sob o ponteiro |
+| **`.`** | Escreve para a saída o valor sob o ponteiro |
+| **`,`** | lê um caractere (um byte) e o armazena sob a célula do ponteiro |
+| **`[`** | se o valor da célula sob o ponteiro for zero, move o ponteiro para a próxima instrução logo após o \] correspondente |
+| **`]`** | se o valor da célula sob o ponteiro não for zero, move o ponteiro de volta para a instrução logo após o \[ correspondente  |
 
 ## Requerimentos técnicos
 
@@ -47,7 +70,7 @@ Link direto para o zip do repositório hospedado no Heptapod, se o link não mud
 
 * **Link do zip** [https://foss.heptapod.net/pypy/pypy/-/archive/branch/default/pypy-branch-default.zip](https://foss.heptapod.net/pypy/pypy/-/archive/branch/default/pypy-branch-default.zip)
 
-### Executando a versão Python3
+## Executando a versão Python3
 
 ```bash
 # navegue até a raíz do projeto
@@ -60,7 +83,7 @@ Hello world!
 
 ```
 
-### Executando a versão Python2
+## Executando a versão Python2
 
 ```bash
 # navegue até a raíz do projeto
@@ -73,7 +96,7 @@ Hello world!
 
 ```
 
-### Realizando o build com RPython
+## Realizando o build com RPython
 
 ```bash
 # navegue até a raíz do projeto
@@ -93,7 +116,7 @@ Hello world!
 
 ```
 
-## Rodando os teste
+## Rodando os testes
 
 ```bash
 # navegue até a raíz do projeto
