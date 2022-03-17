@@ -164,7 +164,7 @@ Para rodar os testes do script python2, é necessário configurar a variável "T
 $ cd bf-interpreter-rpython
 # configurando o nome ou caminho do seu executável
 $ $Env:TEST_PYTHON2_EXEC =  "D:\Program Files\Python27\python.exe"
-# execute o módulo unittest com o parâmetro discober na pasta  "tests" e modo verboso
+# execute o módulo unittest com o parâmetro discover na pasta  "tests" e modo verboso
 $ python -m unittest discover -s tests -v
 
 ```
