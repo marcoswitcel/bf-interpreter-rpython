@@ -152,7 +152,7 @@ Caso seu executável python global não se chame python, pode configurar o nome 
 $ cd bf-interpreter-rpython
 # configurando o nome ou caminho do seu executável
 $ export TEST_PYTHON_EXEC=python3
-# execute o módulo unittest com o parâmetro discober na pasta  "tests" e modo verboso
+# execute o módulo unittest com o parâmetro discover na pasta  "tests" e modo verboso
 $ python -m unittest discover -s tests -v
 
 ```
